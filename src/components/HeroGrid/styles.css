@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+
+.cell {
+  height: 150px;
+  width: 150px;
+  border: 1px solid #000;
+}
+
+.cell.selected-a { 
+  background-color: #66D5FF;
+}
+
+.cell.selected-b { 
+  background-color: #F966FF;
+}
