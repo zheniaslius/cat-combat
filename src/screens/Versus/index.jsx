@@ -12,6 +12,8 @@ const Versus = () => {
 
   const handleKeyDown = useCallback(
     ({ key }) => {
+      if (!qwertyKeys.includes(key)) return;
+
       setCodesStates((prevState) => ({
         ...prevState,
         [key]: codesState[key] === CODES.length - 1 ? 0 : prevState[key] + 1,
