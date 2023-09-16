@@ -5,7 +5,11 @@ import Versus from './screens/Versus';
 function App() {
   const [isHeroSelected, setIsHeroSelected] = useState(false);
 
-  return <div>{!isHeroSelected ? <HeroSelect onSelect={() => setIsHeroSelected(true)} /> : <Versus />}</div>;
+  const handleHeroSelected = () => {
+    setTimeout(() => setIsHeroSelected(true), 2000);
+  };
+
+  return <div>{!isHeroSelected ? <HeroSelect onSelect={handleHeroSelected} /> : <Versus />}</div>;
 }
 
 export default App;
