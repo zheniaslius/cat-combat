@@ -4,7 +4,7 @@ import './styles.css';
 
 const COLS_COUNT = 3;
 const ROWS_COUNT = 3;
-const initialHero = [0, 0];
+const initialPlayer = [0, 0];
 
 const isSelected = (player, i, j) => {
   if (!player) return false;
@@ -32,8 +32,8 @@ const renderGrid = (playerA, playerB, isASelected) => {
 };
 
 const HeroGrid = ({ onSelect }) => {
-  const [selectedPlayerA, setSelectedPlayerA] = useState(initialHero);
-  const [selectedPlayerB, setSelectedPlayerB] = useState(initialHero);
+  const [selectedPlayerA, setSelectedPlayerA] = useState(initialPlayer);
+  const [selectedPlayerB, setSelectedPlayerB] = useState(initialPlayer);
   const [isPlayerASelected, setIsPlayerASelected] = useState(false);
 
   const handleKeyDown = useCallback(
